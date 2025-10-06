@@ -115,12 +115,3 @@ class MessagingSignalsTest(TestCase):
         msg.save()
         self.assertTrue(MessageHistory.objects.filter(message=msg, old_content="Original").exists())
 """
-}
-
-# Create folder structure and files
-for path, content in files.items():
-    os.makedirs(os.path.dirname(path), exist_ok=True)
-    with open(path, "w") as f:
-        f.write(content.strip())
-
-print(f"{project_name} folder and all files created successfully!")
